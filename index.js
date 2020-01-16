@@ -1,6 +1,12 @@
-module.exports = Add;
+// module.exports = Add;
+module.exports = Subtract;
 
-
-function Add(numberOne, numberTwo) {
-    return numberOne + numberTwo;
+function Subtract(subNumberOne, subNumberTwo, log) {
+    const result = subNumberOne - subNumberTwo;
+    log(result);
+    return result;
 }
+
+// function Add(numberOne, numberTwo) {
+//     return numberOne + numberTwo;
+// }
