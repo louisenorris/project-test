@@ -1,0 +1,1 @@
+Project to play around with and practice testing JavaScript code. 
