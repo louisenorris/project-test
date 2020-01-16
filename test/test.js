@@ -4,6 +4,7 @@ const expect = chai.expect;
 const assert = chai.assert;
 const Add = require('../index');
 
+
 describe('Addition Tests', function(){
     it('should return 3 when passed one and two', function() {
         let numberOne = 1;
