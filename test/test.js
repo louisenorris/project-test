@@ -1,23 +1,41 @@
 const should = require('chai').should();
 const chai = require('chai');
-// const expect = chai.expect;
-// const assert = chai.assert;
-// const Add = require('../index');
 const Subtract = require('../index');
 const sinon = require('sinon');
 
+
+
 describe('Spy Tests', function(){
+
     it('should log result of subtract', function(){
-        let subNumberOne = 1;
-        let subNumberTwo = 2;
+        let numberOne = 3;
+        let numberTwo = 1;
 
         const logSpy = sinon.spy();
 
-        Subtract(subNumberOne, subNumberTwo, logSpy)
+        Subtract(numberOne, numberTwo, logSpy)
 
         logSpy.called.should.be.true;
     })
+
+    it('should call log with result of subtract', function(){
+        let numberOne = 3;
+        let numberTwo = 1;
+
+        const logSpy = sinon.spy();
+
+        Subtract(numberOne, numberTwo, logSpy)
+
+        logSpy.calledWith(2).should.be.true;
+    })
 })
+
+
+
+// const expect = chai.expect;
+// const assert = chai.assert;
+// const Add = require('../index');
+
 
 // describe('Addition Tests', function(){
 //     it('should return 3 when passed one and two', function() {
